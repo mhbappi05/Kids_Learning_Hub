@@ -1,0 +1,75 @@
+main {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  #instruction {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .shape-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .cell {
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border: 2px solid #4a90e2;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s, background 0.2s;
+  }
+  .cell:hover {
+    transform: translateY(-2px);
+    border-color: #0070c0;
+  }
+  
+  .cell.correct {
+    border-color: #34a853;
+    background: #c8f7c5;
+  }
+  .cell.wrong {
+    animation: shake 0.3s;
+    border-color: #ea4335;
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+  }
+  
+  /* Shape styles */
+  .shape-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color);
+  }
+  .shape-square {
+    width: 40px;
+    height: 40px;
+    background: var(--color);
+  }
+  .shape-triangle {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid var(--color);
+  }
+  .shape-star {
+    font-size: 2rem;
+    color: var(--color);
+  }
+  

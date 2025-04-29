@@ -1,0 +1,51 @@
+main {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  #instruction {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .number-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.75rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .number-cell {
+    background: #fff;
+    border: 2px solid #4a90e2;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+  
+  .number-cell:hover {
+    background: #e6f0ff;
+    transform: translateY(-2px);
+  }
+  
+  .correct {
+    background: #c8f7c5 !important;
+    border-color: #34a853 !important;
+  }
+  
+  .wrong {
+    animation: shake 0.3s;
+    border-color: #ea4335 !important;
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+  }
+  

@@ -1,0 +1,48 @@
+#letter-blanks .blank {
+    width: 2rem;
+    height: 2.5rem;
+    border-bottom: 2px solid #ff6b6b;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#letter-bank .tile {
+    background: #fff;
+    border: 2px solid #ff6b6b;
+    border-radius: .5rem;
+    padding: .5rem .75rem;
+    cursor: pointer;
+    user-select: none;
+    transition: transform .1s;
+}
+
+#letter-bank .tile:hover {
+    transform: scale(1.1);
+}
+
+/* feedback */
+.correct {
+    border-color: #34a853 !important;
+    background: #c8f7c5 !important;
+}
+
+.wrong {
+    animation: shake .3s;
+    border-color: #ea4335 !important;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-3px);
+    }
+
+    75% {
+        transform: translateX(3px);
+    }
+}
