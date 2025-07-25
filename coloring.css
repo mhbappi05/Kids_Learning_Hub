@@ -1,77 +1,96 @@
 main {
-    flex: 1;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-  }
-  
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Palette tools */
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.palette .color,
+.palette .eraser {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s, border-color 0.2s;
+}
+
+.palette .color.selected,
+.palette .eraser.selected {
+  border-color: #333;
+  transform: scale(1.2);
+}
+
+.palette .eraser {
+  background: #ddd;
+  font-size: 1.2rem;
+}
+
+/* Canvas wrapper */
+.canvas-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1; /* Maintain square shape */
+  margin: 0 auto;
+}
+
+.canvas-container canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;   /* Responsive width */
+  height: 100%;  /* Responsive height */
+  border-radius: 1rem;
+}
+
+#bg-canvas {
+  z-index: 1;
+  border: 2px solid #4a90e2;
+}
+
+#fg-canvas {
+  z-index: 2;
+  touch-action: none;
+}
+
+/* Optional media tweaks */
+@media (max-width: 480px) {
   select {
-    padding: 0.5rem;
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 300px;
   }
-  
-  .palette {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 1rem;
-  }
-  
+
   .palette .color,
   .palette .eraser {
-    width: 32px;
-    height: 32px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.1s, border-color 0.2s;
+    width: 28px;
+    height: 28px;
   }
-  
-  .palette .color {
-    padding: 0; /* color swatches already sized */
+
+  label {
+    font-size: 1rem;
   }
-  
-  .palette .color.selected,
-  .palette .eraser.selected {
-    border-color: #333;
-    transform: scale(1.2);
-  }
-  
-  .palette .eraser {
-    background: #ddd;
-    font-size: 1.2rem;
-  }
-  
-  .canvas-container {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
-  }
-  
-  .canvas-container canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 1rem;
-  }
-  
-  #bg-canvas {
-    z-index: 1;
-    border: 2px solid #4a90e2;
-  }
-  
-  #fg-canvas {
-    z-index: 2;
-    touch-action: none;
-  }
-  
+}

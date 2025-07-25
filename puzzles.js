@@ -7,12 +7,25 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Load puzzle image into each piece
     function loadPuzzle(url) {
+      // Set background for each piece
       pieces.forEach(p => {
+        const index = parseInt(p.dataset.index);
+        const x = index % 3;
+        const y = Math.floor(index / 3);
         p.style.backgroundImage = `url(${url})`;
+        p.style.backgroundSize = `300px 300px`;
+        p.style.backgroundPosition = `-${x * 100}px -${y * 100}px`;
       });
-      // clear board back to bank
-      pieces.forEach(p => bank.appendChild(p));
+    
+      // Set preview image
+      document.getElementById('preview-image').src = url;
+    
+      // Shuffle pieces
+      const shuffled = [...pieces];
+      shuffled.sort(() => Math.random() - 0.5);
+      shuffled.forEach(p => bank.appendChild(p));
     }
+  
   
     // Initialize first puzzle
     loadPuzzle(select.value);

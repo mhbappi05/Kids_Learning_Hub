@@ -67,3 +67,28 @@ header {
   .back-link:hover {
     text-decoration: underline;
   }
+
+  .hidden {
+    display: none;
+  }
+  
+  #result {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #next-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  #next-btn:hover {
+    background-color: #45a049;
+  }
+  

@@ -1,84 +1,141 @@
 /* Joyful Dashboard Styles */
 body {
-    background: linear-gradient(135deg, #ffe3e3, #e3fafe);
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-  }
+  background: linear-gradient(135deg, #ffe3e3, #e3fafe);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #ff6b6b;
+  text-align: center;
+  margin: 1rem 0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+main {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.controls label {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.controls select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #ff6b6b;
+  border-radius: 0.5rem;
+  outline: none;
+  min-width: 150px;
+}
+
+#sing-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background 0.2s, transform 0.2s;
+  max-width: 100px;
+  width: 100%;
+  margin-top: 0.5rem;   
+  margin-bottom: 0.5rem;
+}
+
+#sing-btn:hover {
+  background: #ff5252;
+  transform: translateY(-2px);
+}
+
+#lyrics-container {
+  background: rgba(255,255,255,0.9);
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.line {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin: 0 0 0.3rem;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.line.active {
+  background: #fffae6;
+  transform: scale(1.02);
+  border-radius: 0.5rem;
+}
+
+.back-link {
+  color: #ff6b6b;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Responsive Enhancements */
+@media (max-width: 600px) {
   header h1 {
-    font-size: 2.5rem;
-    color: #ff6b6b;
-    text-align: center;
-    margin: 1rem 0;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    font-size: 2rem;
   }
-  main {
-    max-width: 600px;
-    margin: auto;
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controls select,
+  #sing-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+  #sing-btn {
+    max-width: 100px;
+    margin: 0.75rem auto;
+  }
+
+  #lyrics-container {
+    max-height: 50vh;
     padding: 1rem;
   }
-  .controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-  }
-  .controls label {
-    font-size: 1.1rem;
-    font-weight: 500;
-  }
-  .controls select {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 2px solid #ff6b6b;
-    border-radius: 0.5rem;
-    outline: none;
-  }
-  #sing-btn {
-    padding: 0.6rem 1.2rem;
-    font-size: 1rem;
-    background: #ff6b6b;
-    color: #fff;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: background 0.2s, transform 0.2s;
-  }
-  #sing-btn:hover {
-    background: #ff5252;
-    transform: translateY(-2px);
-  }
-  #lyrics-container {
-    background: rgba(255,255,255,0.9);
-    border-radius: 1rem;
-    padding: 1rem 1.5rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    max-height: 300px;
-    overflow-y: auto;
-  }
+
   .line {
-    font-size: 1.2rem;
-    padding: 0.5rem;
-    margin: 0 0 0.3rem;
-    transition: background 0.3s, transform 0.3s;
+    font-size: 1.1rem;
   }
-  .line.active {
-    background: #fffae6;
-    transform: scale(1.02);
-    border-radius: 0.5rem;
+
+  main {
+    padding: 1rem 1rem 2rem;
   }
-  footer {
-    text-align: center;
-    margin: 1.5rem 0;
-  }
+
   .back-link {
-    color: #ff6b6b;
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 1rem;
+    display: block;
+    text-align: center;
+    margin-top: 1.5rem;
   }
-  .back-link:hover {
-    text-decoration: underline;
-  }
+}

@@ -9,7 +9,7 @@ main {
   }
   .letter-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 0.75rem;
     max-width: 400px;
     margin: 0 auto;
@@ -42,3 +42,14 @@ main {
     75% { transform: translateX(4px); }
   }
   
+  /*Fine-tune for very small screens */
+@media (max-width: 480px) {
+  .letter-cell {
+    font-size: 1.2rem;
+    padding: 0.75rem;
+  }
+
+  #instruction {
+    font-size: 1rem;
+  }
+}

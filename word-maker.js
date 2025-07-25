@@ -2,7 +2,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const families = {
       at: ['c','b','h','r','m'],
       an: ['c','b','m','p','t'],
-      it: ['s','f','h','l','p']
+      ap: ['c','m','n','t','g'],
+      ag: ['b','t','r','w','s'],
+      am: ['h','j','r','y'],
+      et: ['b','g','j','l','p'],
+      en: ['d','h','m','t','p'],
+      eg: ['b','l','p','k'],
+      it: ['s','f','h','l','p'],
+      ig: ['b','d','f','p','w'],
+      in: ['b','f','p','w','ch'],
+      ip: ['d','h','l','t','z'],
+      ot: ['c','d','g','h','p'],
+      op: ['c','h','m','p','t'],
+      og: ['b','d','f','h','l'],
+      ut: ['b','c','h','n','r'],
+      ug: ['b','d','h','j','r'],
+      un: ['b','f','r','s','g'],
     };
     const select = document.getElementById('family-select');
     const display = document.getElementById('word-display');

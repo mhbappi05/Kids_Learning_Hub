@@ -61,9 +61,59 @@ header h1 {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
+
 footer {
+  background-color: #f8f8f8;
+  padding: 20px;
   text-align: center;
-  padding: 1rem 0;
-  color: #666;
-  font-size: 0.875rem;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #ddd;
 }
+
+footer .contact-links {
+  margin-top: 10px;
+}
+
+footer .contact-links a {
+  margin: 0 10px;
+  color: #007BFF;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+footer .contact-links a:hover {
+  color: #0056b3;
+}
+
+footer .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+footer .back-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FF6B6B;
+  color: #fff;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+footer .back-link:hover {
+  background-color: #313d49;
+  transform: translateX(-2px);
+}
+

@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // draw outline only on bg layer
     bgCtx.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
     bgCtx.drawImage(outlineImg, 0, 0, bgCanvas.width, bgCanvas.height);
+    fgCtx.clearRect(0, 0, fgCanvas.width, fgCanvas.height); // clear drawing layer
   };
 
   async function loadOutline(url) {
